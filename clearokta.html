@@ -1,0 +1,31 @@
+ 
+<html>
+<header><title>This page will clear the OKTA cookie</title></header>
+<script type="text/javascript">
+//YOUR JAVASCRIPT
+
+clearCookie('autolaunch_triggered','suncommunities.okta.com','/');
+clearCookie('DT','suncommunities.okta.com','/');
+clearCookie('JSESSIONID','suncommunities.okta.com','/');
+clearCookie('sid','suncommunities.okta.com','/');
+clearCookie('srefresh','suncommunities.okta.com','/');
+clearCookie('t','suncommunities.okta.com','/');
+
+document.write('Cookies Cleared!');
+
+// similar behavior as an HTTP redirect
+window.location.replace("http://suncommunities.okta.com");
+
+function clearCookie(name, domain, path){
+    var domain = domain || document.domain;
+    var path = path || "/";
+    document.cookie = name + "=; expires=" + +new Date + "; domain=" + domain + "; path=" + path;
+};
+
+</script>
+
+<body>
+
+Clearing Cookies
+</body>
+</html>
